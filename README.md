@@ -1,4 +1,4 @@
-# ProjectMean
+# ProjectMean 🚀 
 
 ## MEAN Stack Deployment to Ubuntu in AWS.
 
@@ -36,7 +36,7 @@ Node.js (JavaScript runtime environment) - Accepts requests and displays results
   
    HTTPS (port 443) – for secure web traffic (optional)
 
-   image 1
+   ![image 1](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%201.jpg)
 
 
 ## Step 2 - SSH into your instance
@@ -67,7 +67,10 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js 
 
    `curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -`
 
-4. Install Node.js:
+      ![image 2](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%202.jpg)
+
+
+5. Install Node.js:
 
    `sudo apt install -y nodejs`
 
@@ -102,7 +105,7 @@ MongoDB stores data in flexible, JSON-like documents. For this application, we w
 
    `sudo systemctl status mongod`
 
-   image 3
+      ![image 3](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%203.jpg)
 
 4. Install npm (Node Package Manager) using nvm (Node Version Manager):
 
@@ -119,7 +122,7 @@ MongoDB stores data in flexible, JSON-like documents. For this application, we w
    `nvm install --lts`
 
 
-   image 4
+      ![image 4](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%204.jpg)
 
 8. Check node version
 
@@ -128,7 +131,7 @@ MongoDB stores data in flexible, JSON-like documents. For this application, we w
 
    `node -v`
 
-   image 5
+      ![image 5](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%205.jpg)
 
 
       
@@ -146,7 +149,7 @@ MongoDB stores data in flexible, JSON-like documents. For this application, we w
 
    `npm init`
 
-   image 6
+      ![image 6](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%206.jpg)
 
    
 11. Create a file named server.js and add the following code:
@@ -417,22 +420,55 @@ MongoDB stores data in flexible, JSON-like documents. For this application, we w
    `node server.js`
 
 
-   image 7
+      ![image 7](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%207.jpg)
    
 
    To access it from the Internet, you need to open TCP port 3300 in your AWS Web Console for your EC2 Instance.
 
 
-   image 8
+      ![image 8](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%208.jpg)
 
 
 
 ## You should now be able to access your Book Register Application by opening a browser and going to http://(your_server_public_ip):3300
 
-   image 9
+Congratulations!!! You have completed your M.E.A.N web stack.
+
+  ![image 9](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/image%209.jpg)
 
 
 
+
+## Errors to likely encounter and Solutions to implement
+
+
+1. The code `sudo service mongodb start` gave me an error code while starting mongodb server as seen below:
+
+   
+  ![error 1](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/error%201.jpg)
+
+  
+The code `sudo systemctl status mongod` worked instead while starting mongodb server
+
+  ![solution 1](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/solution%201.jpg)
+
+
+2. The code `sudo apt install npm` gave me an error when trying to install node package manager.
+  
+  ![error 2](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/error%202.jpg)
+
+  
+  The following code worked better when trying to install npm(node package manager) with nvm (node version manager):
+
+  `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
+
+  
+  `source ~/.bashrc`
+
+  
+  `nvm install --lts`
+  
+  ![solution 2](https://github.com/Captnfresh/ProjectMean/blob/main/ProjectMean/solution%202.jpg)
 
 
 
